@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pausa no servidor - MegaSky Network</title>
+    <link rel="icon" href="Imagens/icone.png" />
+    <link rel="stylesheet" href="style.css"> <style>
+        
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <img src="Imagens/icone.png" alt="MegaSky Logo" class="logo">
+            <div class="nav-area">
+                <nav class="menu">
+                    <a href="index.html">Início</a>
+                    <a href="Noticias.html">Notícias</a>
+                    <a href="Equipe.html">Equipe</a>
+                    <a href="Comandos.html">Comandos</a>
+                    <a href="Minigames.html">Minigames</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="inicial-banner">
+  <div class="container">
+    <img src="Imagens/banner.png" alt="Banner da Página Inicial" class="banner-inicial-img">
+  </div>
+</section>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-title-section" style="padding-top: 80px; text-align: center; margin-bottom: 40px;">
+                <h1 style="font-size: 3rem; color: var(--orange); margin-bottom: 15px;">ATIVIDADES DO SERVIDOR PAUSADAS POR TEMPO INDETERMINADO!</h1>
+                <p style="font-size: 1.2rem; color: var(--text);">Confira nesta notícia, o motivo da pausa nas atividades.</p>
+            </section>
+
+            <section class="content-section" style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem; color: var(--blue); margin-bottom: 25px; border-bottom: 2px solid var(--orange); padding-bottom: 10px;">OLá, players.</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text);">
+                    Temos uma notícia um pouco triste, mas necessária: as atividades de desenvolvimento do MegaSky Network serão <strong>pausadas</strong> por tempo indeterminado.
+                </p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 20px; color: var(--text);">
+                
+                    Enquanto trabalhávamos no servidor, percebemos a necessidade de expandir nossas ideias para algo maior. Assim nasceu a MegaSky, uma startup voltada para tecnologia, tanto em hardware quanto em software.<br>
+                    Por conta disso, precisamos concentrar nossos esforços na estruturação da MegaSky e na estabilização da renda. A expectativa é que possamos retomar o desenvolvimento do servidor em 2 a 3 meses, mas não podemos prometer uma data exata.
+                    Agradecemos de coração pela paciência e pela fidelidade de todos vocês. Esse é apenas um passo para que, no futuro, possamos entregar algo ainda melhor.<br><br>
+                    <strong>Não</strong>, o servidor não acabou, é apenas uma pausa para focar em algo que vai afetar positivamente o servidor.<br>
+                    O MegaSky Network não está a venda, e nem tenho interesse em vende-lo.<br><br>
+
+                    <li>Rayoziny, o CEO.</li>
+                </ul>
+            </section>
+
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MegaSky Network - Todos os direitos reservados. | Desenvolvido com amor por Rayoziny⚡🌙</p>
+            <div class="social">
+        <a href="https://x.com/MegaSkyNetwork">Twitter</a>
+        <a href="https://www.instagram.com/megaskynetworkk/">Instagram</a>
+        <a href="https://www.youtube.com/@MegaSkyNetwork">YouTube</a>
+        <a href="Contato.html">Contate-me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const atual = root.getAttribute('data-theme');
+      const novoTema = atual === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', novoTema);
+      
+      toggle.textContent = novoTema === 'dark' ? '🌙' : '☀️';
+
+      localStorage.setItem('tema', novoTema);
+    });
+
+    const temaSalvo = localStorage.getItem('tema');
+    if (temaSalvo) {
+      root.setAttribute('data-theme', temaSalvo);
+      toggle.textContent = temaSalvo === 'dark' ? '🌙' : '☀️';
+    }
+  }
+    </script>
+
+    </body>
+</html>
